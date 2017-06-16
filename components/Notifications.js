@@ -23,7 +23,7 @@ class Notifications extends React.Component {
             return (
                 <Link to={inviteUrl}>
                   <View style={styles.eventListItem}>
-                  <Text style={styles.baseText}>
+                  <Text style={[styles.baseText, styles.eventTitle]}>
                      <Text style={{ fontWeight: '600' }}>{item.title}</Text> &rarr; {item.recipientFirstName} {item.recipientLastName}
                   </Text>
                 </View>

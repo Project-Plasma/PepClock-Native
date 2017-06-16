@@ -121,7 +121,7 @@ class Events extends React.Component {
             renderItem={({ item }) => (
               <Link to={`events/${item.id}`}>
                 <View style={styles.eventListItem}>
-                  <Text style={styles.baseText}>
+                  <Text style={[styles.baseText, styles.eventTitle]}>
                     <Text style={{ fontWeight: '600' }}>{item.title}</Text> &rarr; {item.firstName} {item.lastName}
                   </Text>
                 </View>

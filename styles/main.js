@@ -46,12 +46,15 @@ const main = StyleSheet.create({
     height: 44,
   },
   eventList: {
-    marginBottom: 20,
+    marginBottom: 30,
   },
   eventListItem: {
     flex: 1,
-    justifyContent: 'center',
-    height: 44,
+    justifyContent: 'center'
+  },
+  eventTitle: {
+    paddingTop: 8,
+    paddingBottom: 8
   },
   topic: {
     textAlign: 'center',
@@ -64,9 +67,9 @@ const main = StyleSheet.create({
     marginBottom: 10
   },
   h2: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
-    lineHeight: 20,
+    lineHeight: 24,
     color: '#333'
   },
   baseText: {
@@ -104,10 +107,18 @@ const main = StyleSheet.create({
   },
   listItemLabel: {
     marginTop: 3,
-    fontWeight: '500'
+    marginBottom: 5,
+    fontWeight: '500',
+    lineHeight: 22
   },
   itemAuthor: {
     fontStyle: 'italic'
+  },
+  contributionMedia: {
+    width: '100%',
+    height: 300,
+    marginBottom: 10,
+    borderRadius: 2
   },
   button: {
     borderRadius: 100,

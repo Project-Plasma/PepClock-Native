@@ -37,7 +37,10 @@ class VideoContribution extends Component {
       : <Image source={{uri: playIcon}} style={styles.front} />;
 
     return (
-      <TouchableOpacity onPress={this.handleVideoTap}>
+      <TouchableOpacity
+        onPress={this.handleVideoTap}
+        style={{marginBottom: 10}}
+      >
         {icon}
         <Video
           source={{uri: this.props.url}}
