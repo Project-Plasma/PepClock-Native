@@ -14,13 +14,14 @@ class ContributionListItem extends React.Component {
   }
 
   render() {
-    const { text, type, media_url, user: { first, last } } = this.props.contribution;
+    const { text, type, media_url: uri, user: { first } } = this.props.contribution;
+    const last = this.props.contribution.last || '';
 
     if (type === 'image') {
       return (
         <View style={styles.listItem}>
           <Image
-            source={{uri: media_url}}
+            source={{ uri }}
             style={{width: '100%', height: 300}}
           />
           <Text style={[styles.baseText, styles.listItemLabel]}>{text}</Text>
@@ -32,8 +33,9 @@ class ContributionListItem extends React.Component {
     if (type === 'video') {
       return (
         <View style={styles.listItem}>
-          <VideoContribution url={media_url} />
+          <VideoContribution url={uri} />
           <Text style={[styles.baseText, styles.listItemLabel]}>{text}</Text>
+          <Text style={[styles.baseText, styles.itemAuthor]}>{`${first} ${last}`}</Text>
         </View>
       );
     }
@@ -41,6 +43,7 @@ class ContributionListItem extends React.Component {
     return (
       <View style={styles.listItem}>
         <Text style={[styles.baseText, styles.listItemLabel]}>{text}</Text>
+        <Text style={[styles.baseText, styles.itemAuthor]}>{`${first} ${last}`}</Text>
       </View>
     );
   }
